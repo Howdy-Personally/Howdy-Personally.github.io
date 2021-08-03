@@ -8,21 +8,39 @@
 </ul>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>HTML5学堂</title>
-    <style type="text/css">
-        .h5course {
-            width: 200px;
-            height: 200px;
-            /* 图片路径记得修改哈 */
-            background: url('https://github.com/Howdy-Personally/Howdy-Personally.github.io/blob/main/img/b5e.png');
-        }
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>New Tab</title>
+    <style>
+      body {
+        background: #FFFFFF;
+        margin: 0;
+      }
+
+      #backgroundImage {
+        border: none;
+        height: 100%;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        width: 100%;
+      }
+
+      [show-background-image] #backgroundImage {
+        visibility: visible;
+      }
     </style>
-</head>
-<body>
-    <div class="h5course">HTML5学堂</div>
-</body>
+  </head>
+  <body>
+    <iframe id="backgroundImage"
+        src="https://github.com/Howdy-Personally/Howdy-Personally.github.io/blob/main/img/b5e.png">
+    </iframe>
+    <ntp-app></ntp-app>
+    <script type="module" src="new_tab_page.js"></script>
+    <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
+    <link rel="stylesheet" href="shared_vars.css">
+  </body>
 </html>
