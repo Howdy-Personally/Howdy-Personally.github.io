@@ -10,10 +10,11 @@
     <title>今日校园</title>        
     <style type="text/css">    
       html{margin: 0; padding: 0;}
-      body{margin: 0 auto; padding: 0;max-width: 1000px; background: #f5f6f8;font-size: 14px;}
+      header{width: 100%;background: #f5f6f8;clear: both;position: fixed;top: 0;font-size: 14px;} 
       .m-header{position: relative; height: 0.48rem;line-height: 0.48rem; font-size:0.16rem;border-bottom:1px solid #EBEBEB; text-align: center;color: #2C2C2C;letter-spacing: 0;background: #fff;}
       .m-return {position: absolute;display: inline-block;top:0.13rem;left: 0.12rem;width: 0.14rem; height: 0.22rem; background-image: url(http://c2.cgyouxi.com/website/mobile/img/arrow-l.png?v=20180122);background-size: 100% 100%;}
       .m-tab{position: relative;padding: 0.40rem 0 0; width: 100%;background: #fff;}
+      body{margin: 0 auto; padding: 0;max-width: 1000px; background: #f5f6f8;font-size: 14px;}
       .m-tab a{position: absolute; display: inline-block;width: 50%; font-size: 0.14rem;color: #2C2C2C;letter-spacing: 0;line-height: 0.38rem;text-align: center;text-decoration: none;}
       .m-tab a:first-child{top: 0;left: 0; }
       .m-tab a.m-coupons{top:0; right:0;}
@@ -21,7 +22,7 @@
       .m-division{height: 1px; background:#EBEBEB;} 
       .m-view1{background: #fff;height: 200px;}    
       .m-view2{background: #fff;height: 200px;}      
-      footer{width: 100%;background:rgb(30, 144, 255);clear: both;position: fixed;bottom: 0;} 
+      footer{width: 100%;background:#1e90ff;clear: both;position: fixed;bottom: 0;font-size: 16px;} 
       @media screen and (min-width: 360px) {  
         html {
           font-size: 100px!important;
@@ -51,17 +52,20 @@
       })(document, window);     
     </script>       
     <link rel="apple-touch-icon" href="img/192x192.png"> 
-</head>          
+</head> 
+<header>
+    <div class="m-header" id="m-header">
+        <div class="m-return" id="m-return"></div>
+        我的活动
+    </div>
+    <div class="m-tab">
+        <a href="javascript:void(0);" id="m-my-invite" class="active">我邀请的好友</a>
+        <a href="javascript:void(0);" id="m-my-coupons" class="m-coupons">我的赠送券</a>
+        <div class="m-division"></div>  
+    </div> 
+</header>         
 <body>  
-  <div class="m-header" id="m-header">
-  <div class="m-return" id="m-return"></div>
-  我的活动
-  </div>
-  <div class="m-tab">
-    <a href="javascript:void(0);" id="m-my-invite" class="active">我邀请的好友</a>
-    <a href="javascript:void(0);" id="m-my-coupons" class="m-coupons">我的赠送券</a>
-    <div class="m-division"></div>  
-  </div>  
+ 
   <div id="m-view1" class="m-view1">
     <section>
         <figure><img src="img/b5e.png" alt="" width="100%"><img src="sp/sp2.png" alt="" width="50%"></figure>
@@ -136,10 +140,9 @@
   </script>    
 
 
+</body>     
 <footer>
     <!-- <div style=" text-align:center;line-height:50px;color:white;">转发</div>   -->
-    <div style=" text-align:center;line-height:40px;color:white;">转发</div>
-</footer>
-
-</body>          
+    <div style=" text-align:center;line-height:45px;color:white;">转发</div>
+</footer>     
 </html>
