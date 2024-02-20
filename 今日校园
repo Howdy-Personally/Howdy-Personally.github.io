@@ -1,1 +1,168 @@
-今日
+<!DOCTYPE html>          
+<html>          
+<head>          
+    <meta charset="UTF-8">        
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>今日校园</title>        
+    <style type="text/css">    
+      html{margin: 0; padding: 0;}
+      header{width: 100%;background: #f5f6f8;clear: both;position: fixed;top: 0;font-size: 14px;max-width: 1000px;} 
+      .test{width: 100%;background:#1e90ff;clear: both;position: fixed;top: 0;font-size: 16px;max-width: 1000px;}
+      .m-header{position: relative; height: 0.48rem;line-height: 0.48rem; font-size:0.15rem;border-bottom:1px solid #EBEBEB; text-align: center;color: #2C2C2C;letter-spacing: 0;background: #fff;}
+      .m-return {position: absolute;display: inline-block;top:0.13rem;left: 0.12rem;width: 0.14rem; height: 0.22rem; background-image: url(img/8Dn.png);background-size: 100% 100%;}
+      .m-feedback {position: absolute;display: inline-block;right: 0.12rem;font-size: 14px;color:#ff0000}
+      .m-tab{position: relative;padding: 0.40rem 0 0; width: 100%;background: #ffffff;}
+      body{width: 100%;top: 0;margin: 0 auto; padding: 0;max-width: 1000px; background: #f6f7f9;font-size: 14px;}
+      .bar{width: 100%;background: rgb(128,128,128);clear: both;height:1.8rem;line-height: 0.48rem; font-size:0.16rem;border-bottom:1px solid #EBEBEB;}
+      .pass{position:absolute; left:calc((100vw - 0.8rem - 8px)/2); top:0.85rem;color:#f5f6f8;letter-spacing:2px;}
+      .self-infor{position: absolute;display: inline-block;right: calc((max(1000px,100vw) - 1000px)/2 + 0.12rem);font-size: 14px;color:#f5f6f8}
+      .finish{position:absolute; left:calc((100vw - 100px)/2); top:1.15rem;color:#f5f6f8;font-size: 30px;letter-spacing:5px}
+      .m-tab a{position: absolute; display: inline-block;width: 50%; font-size: 0.14rem;color: #2C2C2C;letter-spacing: 0;line-height: 0.38rem;text-align: center;text-decoration: none;}
+      .m-tab a:first-child{top: 0;left: 0; }
+      .m-tab a.m-coupons{top:0; right:0;}
+      /* .m-tab a.active{border-bottom: 3px solid #FFAC28;} */
+      .m-tab a.active{border-bottom: 3px solid #1e90ff;color: #1e90ff;font-weight: bold;}
+      .m-division{height: 1px; background:#EBEBEB;} 
+      .m-view1{background: #fff;height: 200px;}    
+      .m-view2{background: #fff;height: 200px;}      
+      footer{width: 100%;background:#1e90ff;clear: both;position: fixed;bottom: 0;font-size: 16px;max-width: 1000px;} 
+      @media screen and (min-width: 360px) {  
+        html {
+          font-size: 100px!important;
+        }
+      }
+
+    </style>   
+    <script type="text/javascript">  
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.6 + 'px';
+      (function (doc, win) {
+          var docEl = doc.documentElement;
+          var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+          var recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              if (!clientWidth) {
+                  return;
+              }
+              docEl.style.fontSize = 100 * (clientWidth / 360) + 'px';
+          };
+
+          if (!doc.addEventListener) {
+              return;
+          }
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);     
+    </script>       
+    <link rel="apple-touch-icon" href="img/192x192.png"> 
+</head> 
+<header>
+    <div class="test"style=" text-align:center;line-height:45px;color:white;">转发</div>
+    <div class="m-header" id="m-header">
+        <div class="m-return" id="m-return"></div>
+        <b>请假详情</b>
+        <div class="m-feedback" id="m-feedback">反馈</div>
+    </div>
+    <div class="m-tab">
+        <a href="javascript:void(0);" id="m-my-invite" class="active">请假信息</a>
+        <a href="javascript:void(0);" id="m-my-coupons" class="m-coupons">核验二维码</a>
+        <div class="m-division"></div>  
+    </div> 
+</header>         
+<body>  
+    <div id="bar" class="bar">
+        <section>
+            <a id="pass" class="pass">审批已通过</a>
+        </section>
+        
+    </div>
+
+    <div id="m-view1" class="m-view1">
+        <section>
+            
+            <a>家电/家居</figcaption>
+            <a id="self-infor" class="self-infor">个人信息</a>
+            <a id="finish" class="finish">已完成</a>
+            
+            <figcaption>家电/家居</figcaption>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>
+            <figure><img src="sp/sp1.png" alt="" width="50%"><img src="sp/sp2.png" alt="" width="50%"></figure>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>  
+              
+        </section>
+        <section>
+            <figure><img src="img/b5e.png" alt="" width="100%"><img src="sp/sp2.png" alt="" width="50%"></figure>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>
+            <figure><img src="sp/sp1.png" alt="" width="50%"><img src="sp/sp2.png" alt="" width="50%"></figure>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>        
+        </section>
+        <section>
+            <figure><img src="img/b5e.png" alt="" width="100%"><img src="sp/sp2.png" alt="" width="50%"></figure>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>
+            <figure><img src="sp/sp1.png" alt="" width="50%"><img src="sp/sp2.png" alt="" width="50%"></figure>
+            <figcaption>食品/家电</figcaption>
+            <figure><img src="sp/sp3.png" alt="" width="50%"><img src="sp/sp4.png" alt="" width="50%"></figure>
+            <figcaption>家电/家居</figcaption>
+            <figure><img src="sp/sp5.png" alt="" width="50%"><img src="sp/sp6.png" alt="" width="50%"></figure>
+            <figcaption>数码/珠宝</figcaption>        
+        </section>
+    </div>
+    <div id="m-view2" class="m-view2" style="display: none;"> 
+        2
+    </div>  
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>    
+    <script type="text/javascript">    
+        $('#m-return').on('click', function() {
+        window.history.back()
+        });  
+        var myCoupons = $('#m-my-coupons');
+        var myInvite = $('#m-my-invite');
+        var view1 = $('#m-view1');
+        var view2 = $('#m-view2');  
+        $('#m-return').on('click', function() {
+        window.history.back()
+        });
+        myInvite.on('click', function() {
+        myCoupons.removeClass('active');
+        myInvite.addClass('active');
+        view2.hide();
+        view1.show(); 
+        });
+        myCoupons.on('click', function() {
+        myInvite.removeClass('active');
+        myCoupons.addClass('active');     
+        view1.hide();
+        view2.show();   
+        });   
+    </script>    
+
+
+</body>     
+<footer>
+
+    <div style=" text-align:center;line-height:45px;color:white;">转发</div>
+</footer>     
+</html>
